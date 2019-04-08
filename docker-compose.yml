@@ -1,0 +1,13 @@
+version: '2'
+services:
+  PostgreSQL:
+    container_name: BackendTest
+    image: postgres:10-alpine
+    ports:
+      - '5431:5432'
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=toor
+      - POSTGRES_DB=backend
+    volumes:
+      - ./docker-volumes/postgresql:/var/lib/postgresql

@@ -1,0 +1,31 @@
+{
+  "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+  "notify": false,
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testRegex": "/src/.*\\.(test|spec).(ts|tsx|js)$",
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,tsx,ts}",
+    "!**/docker-volumes/**",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!**/index.ts",
+    "!**/specs/**",
+    "!**/*.module*.ts",
+    "!**/*.provider*.ts",
+    "!src/server.ts"
+  ],
+  "coverageReporters": ["json", "lcov"],
+  "coveragePathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/docker-volumes"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/docker-volumes"],
+  "globals": {
+    "ts-jest": {
+      "diagnostics": {
+        "warnOnly": true
+      }
+    }
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.ts"
+}
