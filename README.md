@@ -1,7 +1,3 @@
-Levantar el docker -> docker-compose up
-Levantar el backend -> npm run start
-Realizar los test de la app -> npm run test
-Realizar la carga de datos de la base de datos
 <h1>Back prueba técnica Atlas</h1>
 
 El backend se ha realizado con el framework NestJs. El backend se encuentra dentro de un contenedor docker.
